@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.AndroidAppAuthentication" parent="@style/Theme.Leanback" />
+</resources>

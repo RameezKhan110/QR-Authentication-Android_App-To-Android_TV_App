@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "463296037113",
+    "project_id": "tv-auth-7c8c6",
+    "storage_bucket": "tv-auth-7c8c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463296037113:android:18c2ee1d57113214d76228",
+        "android_client_info": {
+          "package_name": "com.example.androidtvauthentication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi_mPFWsA6pT862mKIe2Jcj_igfDpbIuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
