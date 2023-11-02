@@ -15,14 +15,7 @@ class AuthViewModel: ViewModel() {
     private val _getToken: MutableLiveData<String> = MutableLiveData()
     val getToken: LiveData<String> = _getToken
 
-    private val _userDetails: MutableLiveData<AuthModel> = MutableLiveData()
-    val userDetails: LiveData<AuthModel> = _userDetails
-
     fun getToken() = viewModelScope.launch{
         _getToken.postValue(authRepository.getFCMToken())
-    }
-
-    fun getData(auth: AuthModel) {
-        _userDetails.postValue(auth)
     }
 }

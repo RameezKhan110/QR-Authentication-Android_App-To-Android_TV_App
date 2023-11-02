@@ -20,6 +20,9 @@ class LoginFragment : Fragment() {
         binding.btnScanQrCode.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_barCodeFragment)
         }
+        binding.goToRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
         return binding.root
     }
 

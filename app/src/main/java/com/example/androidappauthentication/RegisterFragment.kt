@@ -1,18 +1,13 @@
 package com.example.androidappauthentication
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import com.google.gson.Gson
-
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import com.example.androidappauthentication.databinding.FragmentRegisterBinding
 import com.example.androidappauthentication.room.Auth
@@ -56,7 +51,6 @@ class RegisterFragment : Fragment() {
                 if (userPassword == userChangePass) {
                     val auth = Auth(0, userName, userEmail, userPassword)
                     authViewModel.register(auth)
-//                    saveUser()
                     authViewModel.login(auth.email?:"", auth.password?:"").observe(viewLifecycleOwner) {
                             Log.d("TAG", "it: $it")
                             Extensions.saveUser(it)
@@ -74,7 +68,4 @@ class RegisterFragment : Fragment() {
         }
 
     }
-
-
-
 }

@@ -1,30 +1,25 @@
 package com.example.androidappauthentication
 
-import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.util.JsonReader
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.budiyev.android.codescanner.CodeScanner
 import com.budiyev.android.codescanner.DecodeCallback
 import com.example.androidappauthentication.databinding.FragmentHomeBinding
-import com.example.androidappauthentication.room.Auth
 import com.example.androidappauthentication.utils.Extensions
-import com.google.gson.Gson
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.Response
 import java.io.IOException
@@ -36,8 +31,8 @@ class HomeFragment : Fragment() {
     private lateinit var codeScanner: CodeScanner
     private val CAMERA_PERMISSION_CODE = 101
     private val fcmEndpoint = "https://fcm.googleapis.com/fcm/send"
-    private val serverKey =
-        "AAAAa96YgPk:APA91bG7tR_3V5l1qljRXBvqWF9bbkSHlOdWnMF9xEOu_qKj7U4LyIHuYRtyUy6Ap5nUGrCoVm5d_nk3GSw9NR4yGH0Cbfb5gUIIstMsQmcNyUXV_Z4gEGJUZnrS3ZzrnlgW7gkI7lcG"
+    //sender server key
+    private val serverKey = "AAAAjUykSjM:APA91bHKrIQLfCTfMKRNm9A6ciYDt2Fal-NKFPGcUyB6qF5EYCe32NeAb8GN5v2DKNZFfDMcsw2wUm624Tw6HyCg7wnYszRhTVMorS72yBL-LBL4xVVyu6JxhF3N61SNBVjPCax-5lsb"
     var recipientToken: String = ""
 
     override fun onCreateView(
@@ -155,6 +150,4 @@ class HomeFragment : Fragment() {
             }
         }
     }
-
-
 }

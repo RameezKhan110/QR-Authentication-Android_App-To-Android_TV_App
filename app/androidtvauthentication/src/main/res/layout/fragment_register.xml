@@ -106,13 +106,14 @@
     </TextView>
 
     <TextView
+        android:id="@+id/goToLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="20dp"
+        android:text="Already have an account? Login"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Already have an account? Login">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
     </TextView>
 
